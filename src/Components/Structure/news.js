@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import { colors } from "../../Styles/colors";
-import Home from "../../assets/Aside/home.png"
+
 
 export const News = styled.div`
   background-color: ${colors.ligthPurple};
-  width: 30vw;
+  width: 20vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
