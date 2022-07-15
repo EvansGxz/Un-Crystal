@@ -1,0 +1,19 @@
+input[type=text] {
+  width: 6vw;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  border:none;
+  background-color: #000;
+  outline-width: 0;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+  font-size: 3vh;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+  border:none;
+  outline-width: 0;
+  border-bottom: 1px solid #000;
+}

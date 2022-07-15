@@ -9,6 +9,7 @@ export const News = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-left: 1px solid #ccc;
 `;
 
 const Icon = styled.img`
