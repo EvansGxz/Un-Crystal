@@ -7,30 +7,35 @@ import Config from "../../assets/Aside/config.png";
 import Logout from "../../assets/Aside/logout.png";
 
 export const Aside = styled.div`
-  background-color: ${colors.blue};
+  background-color: ${colors.dark};
   width: 20vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: end;
   padding-right: 1vh;
+  border-right: 1px solid #ccc;
 `;
 
 const Icon = styled.img`
   height: 3.5vh;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  filter: invert(100%);
+
 `;
 
 const Text = styled.p`
   font-size: 2vh;
   font-weight: 600;
+  width: 8rem;
+  text-align: left;
+  color: ${colors.white}
 `;
 
 const IconContainer = styled.div`
-  background-color: ${colors.white};
   width: 13vw;
   height: 8vh;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   border-radius: 0 2vw 2vw 0;
   flex-direction: row;
   display: flex;
@@ -48,20 +53,13 @@ export default function AsideBar() {
   const [isHovering2, setIsHovering2] = useState(false);
   const [isHovering3, setIsHovering3] = useState(false);
   
-  const styles = {
-    day: {
-      transition: "all 0.3s",
-      backgroundColor: isHovering ? "salmon" : "",
-      color: isHovering ? "white" : "",
-      
-    },
-  };
+ 
   return (
     <Aside>
       <IconContainer
         style={{
       transition: "all 0.3s",
-      backgroundColor: isHovering ? "salmon" : "",
+      backgroundColor: isHovering ? "rgba(231, 233, 234, 0.1)" : "",
       color: isHovering ? "white" : "",
       
     }}
@@ -69,12 +67,12 @@ export default function AsideBar() {
         onMouseLeave={()=>setIsHovering(false)}
       >
         <Icon src={Home} />
-        <Text style={styles.day}>Inicio</Text>
+        <Text>Inicio</Text>
       </IconContainer>
       <IconContainer
         style={{
       transition: "all 0.3s",
-      backgroundColor: isHovering1 ? "salmon" : "",
+      backgroundColor: isHovering1 ? "rgba(231, 233, 234, 0.1)" : "",
       color: isHovering1 ? "white" : "",
       
     }}
@@ -87,7 +85,7 @@ export default function AsideBar() {
       <IconContainer
         style={{
       transition: "all 0.3s",
-      backgroundColor: isHovering2 ? "salmon" : "",
+      backgroundColor: isHovering2 ? "rgba(231, 233, 234, 0.1)" : "",
       color: isHovering2 ? "white" : "",
       
     }}
@@ -100,9 +98,11 @@ export default function AsideBar() {
       <IconContainer
         style={{
       transition: "all 0.3s",
-      backgroundColor: isHovering3 ? "salmon" : "",
+      backgroundColor: isHovering3 ? "rgba(231, 233, 234, 0.1)" : "",
       color: isHovering3 ? "white" : "",
-      
+      position: "absolute",
+    bottom: 0,
+    marginBottom: "1vh",
     }}
         onMouseEnter={()=>setIsHovering3(true)}
         onMouseLeave={()=>setIsHovering3(false)}
