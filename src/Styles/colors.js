@@ -18,4 +18,5 @@ export const colors = {
   grayNigth: "#767676",
   colorText: "#35435E",
   grayFade: "#787B82",
+  ligthPurple: "#CBC3E3"
 };

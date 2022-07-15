@@ -12,14 +12,28 @@ export const Aside = styled.div`
 `;
 
 const Icon = styled.img`
-  width: 2vw;
+  height: 3.5vh;
+  margin-right: 2rem;
+`;
+
+const Text = styled.p`
+  font-size: 2vh;
+  font-weight: 600;
+  
 `;
 
 const IconContainer = styled.div`
   background-color: ${colors.white};
-  width: 10vw;
-  height: 10vh;
-  radio-border: 50%;
+  width: 13vw;
+  height: 8vh;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
 `;
 
 export default function AsideBar(){
@@ -28,11 +42,11 @@ export default function AsideBar(){
     <Aside>
     <IconContainer>
       <Icon src={Home}/>
-      <p>Inicio</p>
+      <Text>Inicio</Text>
       </IconContainer>
       <IconContainer>
       <Icon src={Home}/>
-      <p>Inicio</p>
+      <Text>Inicio</Text>
       </IconContainer>
     </Aside>
   )
