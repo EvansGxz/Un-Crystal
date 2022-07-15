@@ -15,7 +15,7 @@ const Container = styled.div`
   background-color: ${colors.black};
   width: 50vw;
   border-radius: 20px;
-  box-shadow: 0px 20px 20px rgba(57, 57, 57, 0.1);
+  
   margin: 1rem;
   padding: 0.225rem;
   
