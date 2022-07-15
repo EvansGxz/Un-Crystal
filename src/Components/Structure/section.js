@@ -3,7 +3,7 @@ import { colors } from "../../Styles/colors";
 
 export const Section = styled.div`
   background-color: ${colors.dark};
-  width: 55vw;
+  width: 60vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
