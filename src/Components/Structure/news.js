@@ -3,13 +3,14 @@ import { colors } from "../../Styles/colors";
 
 
 export const News = styled.div`
-  background-color: ${colors.ligthPurple};
+  background-color: ${colors.dark};
   width: 20vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-left: 1px solid #ccc;
+  @media screen and (max-width: 600px) {display: none}
 `;
 
 const Icon = styled.img`

@@ -12,13 +12,15 @@ const Wrapper = styled.div`
  
 `;
 const Container = styled.div`
-  background-color: ${colors.black};
+  background-color: hsl(220, 25%, 10%);
   width: 50vw;
   border-radius: 20px;
-  
+  focus: hsl(210, 90%, 50%);
+  --shadow-1: hsla(236, 50%, 50%, .3);
+  box-shadow: .4rem .4rem 10.2rem .2rem hsla(236, 50%, 50%, .3);
   margin: 1rem;
   padding: 0.225rem;
-  
+  @media screen and (max-width: 600px) {width: 90vw}
 `;
 export const UserName = styled.p`
   line-height: 0rem;
@@ -52,10 +54,11 @@ const NameFormat = styled.div`
 const BodyContainer = styled.div`
   flex-direction: row;
   display: flex;
-  width: 34vw;
+  width: 47vw;
+  @media screen and (max-width: 600px) {width: 80vw}
 `;
 const Body = styled.p`
-margin-top: -1.225rem;
+margin-top: -1.225vh;
 margin-left: 5vw;
 align-items: center;
 text-align: left;

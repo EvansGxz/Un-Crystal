@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+
+      .media-query {
+        display: flex;
+      }
+
+      .navbar2 {
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar2 li {
+        list-style: none;
+      }
+
+      .hamburger {
+        height: 24px;
+        display: none;
+      }
+
+      .header-example {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .mobile-menu {
+        background-color: lightsteelblue;
+        width: 100%;
+        display: none;
+      }
+
+      .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+      }
+
+      .navbar-mobile {
+        flex-direction: column;
+        gap: 16px;
+        list-style: none;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        .navbar2 {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        /* Important to have this class */
+        .navbar-mobile--open {
+          display: flex;
+        }
+
+        .checkbox {
+          display: none;
+        }
+
+        .checkbox:checked + .mobile-menu {
+          display: flex;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+   
+    <section class="section">
+      <header class="header-example">
+        <div class="header-content">
+          <ul class="navbar2">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+          <label class="hamburger-label" for="hamburger">
+            <img class="hamburger" src="../../assets/Mobile/menu.png" alt="bars-icon"
+          /></label>
+          <input type="checkbox" name="" id="hamburger" class="checkbox" />
+          <div class="mobile-menu">
+            <ul class="navbar-mobile">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      
+    </section>
+
+
+
+    <script>
+      function showMenu() {
+        const navbarMobile = document.querySelector(".navbar-mobile");
+        navbarMobile.classList.toggle("navbar-mobile--open");
+      }
+    </script> 
+  </body>
+</html>
